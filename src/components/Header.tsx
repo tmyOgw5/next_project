@@ -17,14 +17,7 @@ const Header = () => {
       <Container maxW="100vw">
         <Flex justify="space-between" align="center">
           {/* ロゴ */}
-          <Link
-            href="/"
-            fontSize={20}
-            mx={24}
-            color="#222222"
-            my={12}
-            fontWeight="normal"
-          >
+          <Link href="/" fontSize={20} color="#222222" fontWeight="normal">
             Tomoya Ogawa
           </Link>
           {/* ナビゲーションメニュー */}
@@ -32,8 +25,7 @@ const Header = () => {
             <Link
               href="/"
               color="#222222"
-              mx={12}
-              my={12}
+              mx={4}
               fontWeight="normal"
               fontSize={16}
             >
@@ -42,8 +34,7 @@ const Header = () => {
             <Link
               href="/project"
               color="#222222"
-              mx={12}
-              my={12}
+              mx={4}
               fontWeight="normal"
               fontSize={16}
             >
@@ -52,8 +43,7 @@ const Header = () => {
             <Link
               href="/blog"
               color="#222222"
-              mx={12}
-              my={12}
+              mx={4}
               fontWeight="normal"
               fontSize={16}
             >
