@@ -16,7 +16,7 @@ const Skills = () => {
       <UnorderedList fontSize="xl">
         <ListItem>
           Python(Flask,FastAPI), React, JavaScript, TypeScript, C, C++, Java,
-          Git, Docker
+          Go, Git, Docker
         </ListItem>
         <ListItem>TOEIC 860点</ListItem>
       </UnorderedList>

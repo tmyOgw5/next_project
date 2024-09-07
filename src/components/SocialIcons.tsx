@@ -19,10 +19,7 @@ const SocialIcons = () => {
       <Link href="https://github.com/tmyOgw5" target="_blank" pr={2}>
         <FaGithub style={iconStyle} />
       </Link>
-      <Link
-        href="https://www.linkedin.com/in/tomoya-ogawa-63a7652b8/"
-        target="_blank"
-      >
+      <Link href="https://www.linkedin.com/in/tomoyaogawa/" target="_blank">
         <FaLinkedin style={iconStyle} />
       </Link>
     </Flex>

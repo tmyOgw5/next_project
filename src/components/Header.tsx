@@ -32,13 +32,13 @@ const Header = () => {
               Home
             </Link>
             <Link
-              href="/project"
+              href="/works"
               color="#222222"
               mx={4}
               fontWeight="normal"
               fontSize={16}
             >
-              Project
+              Works
             </Link>
             <Link
               href="/blog"
