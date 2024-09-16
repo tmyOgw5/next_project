@@ -3,8 +3,16 @@ import { ListItem, UnorderedList } from "@chakra-ui/react";
 
 const works = [
   {
+    work: "アプリケーションエンジニア、楽天グループ株式会社",
+    date: "2024.09-2024.09",
+  },
+  {
     work: "バックエンドエンジニア、株式会社Finatext",
     date: "2024.08-2024.08",
+  },
+  {
+    work: "ソフトウェアエンジニア、株式会社Affectify",
+    date: "2024.06-2024.07",
   },
   {
     work: "機械学習エンジニア、NPO法人サイエンス・アクセシビリティネット",
