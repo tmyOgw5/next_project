@@ -4,7 +4,7 @@ import HeaderContents from "../components/HeaderContents";
 
 export default function Home() {
   const appStyle: CSSProperties = {
-    backgroundColor: "#F8F8F4", // 好きな背景色を指定
+    backgroundColor: "#FFFFFF",
     overflowY: "auto",
     display: "flex",
     flexDirection: "column",

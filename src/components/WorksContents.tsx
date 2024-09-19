@@ -1,10 +1,9 @@
 import {
+  Box,
   Card,
   Button,
-  SimpleGrid,
   Heading,
   Text,
-  Image,
   Link,
   Modal,
   ModalOverlay,
@@ -14,8 +13,8 @@ import {
   ModalBody,
   ModalFooter,
   CardHeader,
-  CardBody,
   CardFooter,
+  VStack,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 
@@ -47,26 +46,32 @@ const WorksContents = ({ works }: { works: WorksContentsProps[] }) => {
 
   return (
     <React.Fragment>
-      <SimpleGrid
-        spacing={4}
-        templateColumns="repeat(auto-fill, minmax(250px, 1fr))"
+      <VStack
+        spacing={8}
+        align="stretch"
         width={{ base: "100%", md: "100%", lg: "80%" }}
       >
         {works.map((work) => (
-          <Card key={work.id} boxShadow={"md"} _hover={{ shadow: "lg" }}>
-            <CardHeader>
-              <Heading size="md">{work.title}</Heading>
-            </CardHeader>
-            <CardBody>
-              <Text>{work.modalContent}</Text>
-            </CardBody>
-
-            <CardFooter>
-              <Button onClick={() => handleViewDetails(work)}>View here</Button>
-            </CardFooter>
-          </Card>
+          <Box
+            key={work.id}
+            bgGradient="linear(to-l, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%)}"
+            p="2px" // 枠の太さを調整
+            borderRadius="md" // 枠の角を丸める場合
+            _hover={{ boxShadow: "lg" }}
+          >
+            <Card key={work.id} boxShadow={"md"} _hover={{ shadow: "lg" }}>
+              <CardHeader>
+                <Heading size="md">{work.title}</Heading>
+              </CardHeader>
+              <CardFooter>
+                <Button onClick={() => handleViewDetails(work)}>
+                  View here
+                </Button>
+              </CardFooter>
+            </Card>
+          </Box>
         ))}
-      </SimpleGrid>
+      </VStack>
 
       {/* ポップアップ（モーダル） */}
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
@@ -77,11 +82,6 @@ const WorksContents = ({ works }: { works: WorksContentsProps[] }) => {
           <ModalBody>
             {selectedWork && (
               <>
-                <Image
-                  src={selectedWork.imageUrl}
-                  alt={selectedWork.title}
-                  borderRadius="lg"
-                />
                 <Text marginTop={"1rem"}>{selectedWork.modalContent}</Text>
                 {selectedWork.link && (
                   <Link href={selectedWork.link} isExternal color={"blue.400"}>

@@ -3,7 +3,7 @@ import { Box, Flex } from "@chakra-ui/react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const appStyle: CSSProperties = {
-    backgroundColor: "#F8F8F4",
+    backgroundColor: "#FFFFFF",
     overflowY: "auto",
     display: "flex",
     flexDirection: "column",
