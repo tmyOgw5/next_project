@@ -13,8 +13,10 @@ import {
   ModalBody,
   ModalFooter,
   CardHeader,
+  CardBody,
   CardFooter,
   VStack,
+  Image,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 
@@ -22,6 +24,7 @@ interface WorksContentsProps {
   id: number;
   title: string;
   modalContent: string;
+  techStack: string;
   imageUrl?: string;
   link?: string;
 }
@@ -50,6 +53,7 @@ const WorksContents = ({ works }: { works: WorksContentsProps[] }) => {
         spacing={8}
         align="stretch"
         width={{ base: "100%", md: "100%", lg: "80%" }}
+        mt={8}
       >
         {works.map((work) => (
           <Box
@@ -59,10 +63,18 @@ const WorksContents = ({ works }: { works: WorksContentsProps[] }) => {
             borderRadius="md" // 枠の角を丸める場合
             _hover={{ boxShadow: "lg" }}
           >
-            <Card key={work.id} boxShadow={"md"} _hover={{ shadow: "lg" }}>
+            <Card
+              key={work.id}
+              boxShadow={"md"}
+              _hover={{ shadow: "lg" }}
+              bg="white"
+            >
               <CardHeader>
                 <Heading size="md">{work.title}</Heading>
               </CardHeader>
+              <CardBody>
+                <Image src={work.techStack} alt="skill-icons" />
+              </CardBody>
               <CardFooter>
                 <Button onClick={() => handleViewDetails(work)}>
                   View here
