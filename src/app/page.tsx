@@ -15,7 +15,6 @@ export default function Home() {
   const boxStyle: CSSProperties = {
     backgroundColor: "transparent",
     width: "90vw",
-    height: "100%",
     top: "80px",
     borderRadius: "20px",
     display: "flex",

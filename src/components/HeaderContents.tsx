@@ -12,6 +12,7 @@ import SocialIcons from "./SocialIcons";
 import Timeline from "./Timeline";
 import Skills from "./Skills";
 import WorkExperience from "./WorkExperience";
+import { works } from "@/data/works";
 
 const HeaderContent = () => {
   // メディアクエリの定義
@@ -90,7 +91,7 @@ const HeaderContent = () => {
         </Flex>
       )}
       <Skills />
-      <WorkExperience />
+      <WorkExperience works={works} />
       <Box position="relative" padding="5">
         <Divider borderColor="#222222" />
       </Box>

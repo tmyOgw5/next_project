@@ -13,8 +13,6 @@ import {
   ModalBody,
   ModalFooter,
   CardHeader,
-  CardBody,
-  CardFooter,
   VStack,
   Image,
 } from "@chakra-ui/react";
@@ -22,7 +20,9 @@ import React, { useState } from "react";
 
 interface WorksContentsProps {
   id: number;
-  title: string;
+  jobTitle: string;
+  companyName: string;
+  date: string;
   modalContent: string;
   techStack: string;
   imageUrl?: string;
@@ -53,48 +53,57 @@ const WorksContents = ({ works }: { works: WorksContentsProps[] }) => {
         spacing={8}
         align="stretch"
         width={{ base: "100%", md: "100%", lg: "80%" }}
-        mt={8}
       >
-        {works.map((work) => (
-          <Box
-            key={work.id}
-            bgGradient="linear(to-l, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%)}"
-            p="2px" // 枠の太さを調整
-            borderRadius="md" // 枠の角を丸める場合
-            _hover={{ boxShadow: "lg" }}
-          >
-            <Card
+        {works
+          .slice()
+          .reverse()
+          .map((work) => (
+            <Box
               key={work.id}
-              boxShadow={"md"}
-              _hover={{ shadow: "lg" }}
-              bg="white"
+              bgGradient="linear(to-l, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%)"
+              p="2px" // 枠の太さを調整
+              borderRadius="md" // 枠の角を丸める場合
+              _hover={{ boxShadow: "lg" }}
             >
-              <CardHeader>
-                <Heading size="md">{work.title}</Heading>
-              </CardHeader>
-              <CardBody>
-                <Image src={work.techStack} alt="skill-icons" />
-              </CardBody>
-              <CardFooter>
-                <Button onClick={() => handleViewDetails(work)}>
-                  View here
-                </Button>
-              </CardFooter>
-            </Card>
-          </Box>
-        ))}
+              <Card
+                key={work.id}
+                boxShadow={"md"}
+                _hover={{ shadow: "lg" }}
+                bg="white"
+              >
+                <CardHeader>
+                  <Heading size="md">{work.jobTitle}</Heading>
+                  <Text fontSize="md" color="gray.600" mb={2} mt={2}>
+                    {work.companyName}
+                  </Text>
+                  <Text fontSize="sm" color="gray.600" mb={4} mt={2}>
+                    {work.date}
+                  </Text>
+                  <Image src={work.techStack} alt="skill-icons" mb={4} />
+                  <Button onClick={() => handleViewDetails(work)}>
+                    View details
+                  </Button>
+                </CardHeader>
+              </Card>
+            </Box>
+          ))}
       </VStack>
 
       {/* ポップアップ（モーダル） */}
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>{selectedWork?.title}</ModalHeader>
+          <ModalHeader>{selectedWork?.jobTitle}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             {selectedWork && (
               <>
-                <Text marginTop={"1rem"}>{selectedWork.modalContent}</Text>
+                {selectedWork.imageUrl && (
+                  <Image src={selectedWork.imageUrl} alt="work-image" />
+                )}
+                <Text marginTop={"1rem"} whiteSpace="pre-line">
+                  {selectedWork.modalContent}
+                </Text>
                 {selectedWork.link && (
                   <Link href={selectedWork.link} isExternal color={"blue.400"}>
                     {selectedWork.link}

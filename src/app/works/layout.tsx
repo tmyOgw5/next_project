@@ -4,11 +4,9 @@ import { Box, Flex } from "@chakra-ui/react";
 export default function Layout({ children }: { children: React.ReactNode }) {
   const appStyle: CSSProperties = {
     backgroundColor: "#FFFFFF",
-    overflowY: "auto",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
   };
 
   const boxStyle: CSSProperties = {
@@ -22,9 +20,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <React.Fragment>
-      <Flex style={appStyle}>
+      <Flex style={appStyle} mt={20} mb={20}>
         <Box
-          position="absolute"
           style={boxStyle}
           boxSize={{ base: "70%", sm: "70%", md: "70%", lg: "50%" }}
         >
