@@ -2,7 +2,7 @@
 import WorksContents from "@/components/WorksContents";
 import { works } from "@/data/works";
 
-export const WorksPage = () => {
+const WorksPage = () => {
   return <WorksContents works={works} />;
 };
 

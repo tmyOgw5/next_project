@@ -40,15 +40,6 @@ const Header = () => {
             >
               Works
             </Link>
-            <Link
-              href="/blog"
-              color="#222222"
-              mx={4}
-              fontWeight="normal"
-              fontSize={16}
-            >
-              Blog
-            </Link>
           </Flex>
         </Flex>
       </Container>

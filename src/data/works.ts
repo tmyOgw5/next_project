@@ -37,7 +37,8 @@ export const works = [
     jobTitle: "MLOps Engineer",
     companyName: "株式会社フューチャー",
     date: "2024.04-現在",
-    modalContent: "MLOpsエンジニアとして、機",
+    modalContent:
+      "MLOpsチームで新しいAIサービスのR&D、PoCを行っています。具体的には、Python、Docker、AWS、Azureを用いて、チャットアプリケーションをクラウドで構築し、機能検証を行っています。",
     techStack:
       "https://skillicons.dev/icons?theme=dark&perline=10&i=python,docker,aws,azure",
   },
@@ -71,7 +72,7 @@ export const works = [
     jobTitle: "Software Engineer (Frontend)",
     companyName: "株式会社Affectify",
     date: "2024.06-2024.07",
-    modalContent: `大阪公立大学の学生・教職員が利用できるAIサービスのポータルサイト PortalAI for OMUというアプリケーションの開発に取り組みました。その中でもアプリケーションの改善に取り組み、主にチャットの出力内容のパラメータを調整できる機能の追加を行いました。実装した機能が実際にリリースされて学生に利用されることで、自分の開発した機能が実際に身近で使われることのやりがいを感じました`,
+    modalContent: `大阪公立大学の学生・教職員が利用できるAIサービスのポータルサイト PortalAI for OMUというアプリケーションの開発に取り組みました。その中でもアプリケーションの改善に取り組み、主にチャットの出力内容のパラメータを調整できる機能の追加を行いました。実装した機能が実際にリリースされて学生に利用されることで、自分の開発した機能が実際に身近で使われることのやりがいを感じました。`,
     techStack:
       "https://skillicons.dev/icons?theme=dark&perline=10&i=nextjs,typescript,mongodb",
   },
@@ -110,5 +111,17 @@ export const works = [
       学び: チームでの開発において、役割をうまく分担して、全員が力を発揮できるようにすることの重要性を学んだ。解決したい課題が明確だと開発の方針も明確になり、効率的に開発を進めることができることを学んだ。`,
     techStack:
       "https://skillicons.dev/icons?theme=dark&perline=10&i=nextjs,typescript,python,fastapi,sqlite",
+  },
+  {
+    id: 9,
+    jobTitle: "Software Engineer (Backend/Infrastructure)",
+    companyName: "株式会社サイバーエージェント",
+    date: "2024.10-2024.10",
+    modalContent: `期間: 2日間
+    機械学習基盤におけるKubernetes とスケジューラーの必要性、カスタマイズ方法について学習したのち、Google Kubernetes Engineを用いてスケジューラーの動きをハンズオン形式で学びました。また、Go を用いた独自のスケジューラー実装を行い、自作したスケジューラーについて発表を行いました。
+      
+      `,
+    techStack:
+      "https://skillicons.dev/icons?theme=dark&perline=10&i=go,kubernetes",
   },
 ];

@@ -78,7 +78,7 @@ const Timeline: React.FC = () => {
           date="2024 - 2026"
           icon={<FaGraduationCap />}
         >
-          学部時代の医療AIモデル開発の研究に加え、ドイツで行った研究にも継続して取り組んでいます。
+          学部時代の医療AIモデル開発の研究を引き続き行なっています。
         </TimelineItem>
         <TimelineItem
           title="Research InternshipとしてDFKI(ドイツ人工知能研究センター)に留学"
