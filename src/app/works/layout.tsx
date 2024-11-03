@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const boxStyle: CSSProperties = {
     backgroundColor: "transparent",
-    width: "70vw",
+    width: "90vw",
     top: "80px",
     borderRadius: "20px",
     display: "flex",

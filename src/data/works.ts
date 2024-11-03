@@ -84,6 +84,7 @@ export const works = [
     modalContent:
       "証券取引システムについて、与えられた要件から適切なアーキテクチャをチームで構築するという内容でインターンシップを行いました。具体的に与えられた要件は、高い可用性、ユーザーが50万人で高トラフィック、運用、監視も行うというもので、それを元にAWSサービスを選定しました。チームで相談してECS、Fargate、RDS、SQS、AWS Lambda、CloudWatchなどのサービスを選定し、証券の注文を受け取るAPI、LambdaはGoを用いました。その結果、要件を満たすアーキテクチャを構築することができました。最終日にはそのアーキテクチャをエンジニア、AWSの方々の前で発表し、そのアーキテクチャに対してレビューをいただき、AWSを用いたシステムのアーキテクチャについて深く学ぶことができました。",
     techStack: "https://skillicons.dev/icons?theme=dark&perline=10&i=go,aws",
+    link: "https://zenn.dev/finatext/articles/3138d406eecbef",
   },
   {
     id: 8,
